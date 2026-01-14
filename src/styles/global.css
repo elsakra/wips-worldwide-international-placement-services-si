@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply antialiased;
+    font-feature-settings: 'kern' 1;
+    text-rendering: optimizeLegibility;
+  }
+  
+  h1, h2, h3 {
+    @apply tracking-tighter;
+  }
+}
+
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.animate-on-scroll.animate-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-on-scroll { 
+    opacity: 1; 
+    transform: none; 
+    transition: none; 
+  }
+}
+
+/* Custom gradient text */
+.gradient-text {
+  @apply bg-gradient-to-r from-slate-900 via-blue-800 to-slate-900 bg-clip-text text-transparent;
+}
+
+/* Glass effect */
+.glass {
+  @apply backdrop-blur-xl bg-white/5 border border-white/10;
+}
+
+/* Hover lift effect */
+.hover-lift {
+  @apply transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl;
+}
