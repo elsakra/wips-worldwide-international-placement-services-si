@@ -1,89 +1,150 @@
 ---
-const contactMethods = [
-  {
-    icon: "M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z",
-    label: "Email",
-    value: "contact@wips.ch",
-    href: "mailto:contact@wips.ch"
-  },
-  {
-    icon: "M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z",
-    label: "Phone",
-    value: "+41 XX XXX XX XX",
-    href: "tel:+41000000000"
-  },
-  {
-    icon: "M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z M15 11a3 3 0 11-6 0 3 3 0 016 0z",
-    label: "Office",
-    value: "Zurich, Switzerland",
-    href: "#"
-  }
-];
+// Contact section with multiple office locations
 ---
 
-<section id="contact" class="relative py-32 md:py-40 lg:py-48 bg-white overflow-hidden">
-  <!-- Background image -->
-  <div class="absolute inset-0 z-0">
-    <img 
-      src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1920&q=80" 
-      alt="Modern office space" 
-      class="w-full h-full object-cover opacity-5"
-    />
-  </div>
-  
-  <div class="relative z-10 max-w-7xl mx-auto px-8 lg:px-12">
-    <div class="grid lg:grid-cols-2 gap-16">
+<section id="contact" class="py-24 md:py-32 lg:py-40 bg-white">
+  <div class="max-w-7xl mx-auto px-6 md:px-12 lg:px-20">
+    <!-- Section header -->
+    <div class="text-center max-w-3xl mx-auto mb-16 md:mb-20">
+      <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-stone-900 mb-6 animate-on-scroll">
+        Connect with Our
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-600 to-rose-600">Global Team</span>
+      </h2>
+      <p class="text-xl text-stone-600 leading-relaxed animate-on-scroll">
+        With offices worldwide, we're always nearby to support your talent needs.
+      </p>
+    </div>
+    
+    <div class="grid lg:grid-cols-2 gap-12 lg:gap-16">
+      <!-- Contact form -->
       <div class="animate-on-scroll">
-        <h2 class="text-4xl md:text-5xl font-bold tracking-tight text-stone-900 mb-6">
-          Let's Start Your
-          <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-600 to-rose-600"> Journey</span>
-        </h2>
-        <p class="text-xl text-stone-600 mb-12">
-          Connect with our experts to discuss your international career aspirations. We're here to guide you every step of the way.
-        </p>
+        <h3 class="text-2xl font-bold text-stone-900 mb-8">Start a Conversation</h3>
         
-        <div class="space-y-6">
-          {contactMethods.map((method) => (
-            <a href={method.href} class="flex items-start gap-4 group">
-              <div class="w-12 h-12 bg-gradient-to-br from-amber-500 to-rose-500 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
-                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={method.icon}></path>
+        <form class="space-y-6">
+          <div class="grid md:grid-cols-2 gap-6">
+            <div>
+              <label for="name" class="block text-sm font-medium text-stone-700 mb-2">Full Name</label>
+              <input type="text" id="name" name="name" class="w-full px-4 py-3 rounded-xl border border-stone-200 focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20 transition-colors" required />
+            </div>
+            <div>
+              <label for="company" class="block text-sm font-medium text-stone-700 mb-2">Company</label>
+              <input type="text" id="company" name="company" class="w-full px-4 py-3 rounded-xl border border-stone-200 focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20 transition-colors" required />
+            </div>
+          </div>
+          
+          <div class="grid md:grid-cols-2 gap-6">
+            <div>
+              <label for="email" class="block text-sm font-medium text-stone-700 mb-2">Email</label>
+              <input type="email" id="email" name="email" class="w-full px-4 py-3 rounded-xl border border-stone-200 focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20 transition-colors" required />
+            </div>
+            <div>
+              <label for="phone" class="block text-sm font-medium text-stone-700 mb-2">Phone</label>
+              <input type="tel" id="phone" name="phone" class="w-full px-4 py-3 rounded-xl border border-stone-200 focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20 transition-colors" />
+            </div>
+          </div>
+          
+          <div>
+            <label for="service" class="block text-sm font-medium text-stone-700 mb-2">Service Interest</label>
+            <select id="service" name="service" class="w-full px-4 py-3 rounded-xl border border-stone-200 focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20 transition-colors">
+              <option value="">Select a service</option>
+              <option value="executive">Executive Search</option>
+              <option value="specialist">Industry Specialists</option>
+              <option value="contract">Contract Staffing</option>
+              <option value="rpo">RPO Solutions</option>
+              <option value="consulting">Talent Consulting</option>
+            </select>
+          </div>
+          
+          <div>
+            <label for="message" class="block text-sm font-medium text-stone-700 mb-2">Message</label>
+            <textarea id="message" name="message" rows="4" class="w-full px-4 py-3 rounded-xl border border-stone-200 focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20 transition-colors resize-none"></textarea>
+          </div>
+          
+          <button type="submit" class="w-full px-8 py-4 bg-amber-600 text-white rounded-xl font-semibold hover:bg-amber-700 hover:shadow-lg transition-all duration-300">
+            Send Message
+          </button>
+        </form>
+      </div>
+      
+      <!-- Office locations and contact info -->
+      <div class="space-y-8 animate-on-scroll">
+        <div>
+          <h3 class="text-2xl font-bold text-stone-900 mb-8">Global Headquarters</h3>
+          
+          <div class="bg-stone-50 rounded-2xl p-8 mb-6">
+            <div class="flex items-start gap-4 mb-6">
+              <div class="w-12 h-12 bg-amber-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                <svg class="w-6 h-6 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
                 </svg>
               </div>
               <div>
-                <div class="font-medium text-stone-900">{method.label}</div>
-                <div class="text-stone-600 group-hover:text-amber-600 transition-colors">{method.value}</div>
+                <h4 class="font-semibold text-stone-900 mb-1">Zurich Office</h4>
+                <p class="text-stone-600">
+                  Bahnhofstrasse 100<br />
+                  8001 Zurich, Switzerland
+                </p>
               </div>
-            </a>
-          ))}
-        </div>
-      </div>
-      
-      <div class="animate-on-scroll">
-        <form class="bg-stone-50 rounded-2xl p-8 lg:p-10">
-          <h3 class="text-2xl font-bold text-stone-900 mb-6">Send us a message</h3>
-          
-          <div class="space-y-6">
-            <div>
-              <label for="name" class="block text-sm font-medium text-stone-700 mb-2">Your Name</label>
-              <input type="text" id="name" name="name" class="w-full px-4 py-3 rounded-xl border border-stone-200 focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20 transition-all" required />
             </div>
             
-            <div>
-              <label for="email" class="block text-sm font-medium text-stone-700 mb-2">Email Address</label>
-              <input type="email" id="email" name="email" class="w-full px-4 py-3 rounded-xl border border-stone-200 focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20 transition-all" required />
+            <div class="flex items-start gap-4 mb-6">
+              <div class="w-12 h-12 bg-amber-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                <svg class="w-6 h-6 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                </svg>
+              </div>
+              <div>
+                <h4 class="font-semibold text-stone-900 mb-1">Phone</h4>
+                <p class="text-stone-600">+41 44 123 45 67</p>
+              </div>
             </div>
             
-            <div>
-              <label for="message" class="block text-sm font-medium text-stone-700 mb-2">Your Message</label>
-              <textarea id="message" name="message" rows="4" class="w-full px-4 py-3 rounded-xl border border-stone-200 focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20 transition-all resize-none" required></textarea>
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 bg-amber-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                <svg class="w-6 h-6 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                </svg>
+              </div>
+              <div>
+                <h4 class="font-semibold text-stone-900 mb-1">Email</h4>
+                <p class="text-stone-600">contact@wips.ch</p>
+              </div>
             </div>
-            
-            <button type="submit" class="w-full px-6 py-4 bg-gradient-to-r from-amber-600 to-rose-600 text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-amber-500/25 hover:scale-[1.02] transition-all duration-300">
-              Send Message
-            </button>
           </div>
-        </form>
+        </div>
+        
+        <!-- Regional offices -->
+        <div>
+          <h4 class="font-semibold text-stone-900 mb-4">Regional Offices</h4>
+          <div class="grid gap-4">
+            <div class="flex items-center gap-3 text-stone-600">
+              <svg class="w-5 h-5 text-amber-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+              </svg>
+              <span><strong>London:</strong> 123 Canary Wharf, E14 5AB</span>
+            </div>
+            <div class="flex items-center gap-3 text-stone-600">
+              <svg class="w-5 h-5 text-amber-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+              </svg>
+              <span><strong>New York:</strong> 350 Fifth Avenue, NY 10118</span>
+            </div>
+            <div class="flex items-center gap-3 text-stone-600">
+              <svg class="w-5 h-5 text-amber-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+              </svg>
+              <span><strong>Singapore:</strong> 1 Raffles Place, 048616</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Working hours -->
+        <div class="bg-amber-50 rounded-2xl p-6">
+          <h4 class="font-semibold text-stone-900 mb-3">Business Hours</h4>
+          <p class="text-stone-600 mb-2">Monday - Friday: 8:00 AM - 6:00 PM CET</p>
+          <p class="text-stone-600">24/7 support for urgent placements</p>
+        </div>
       </div>
     </div>
   </div>

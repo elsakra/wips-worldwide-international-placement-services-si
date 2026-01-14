@@ -1,67 +1,200 @@
 ---
-const services = [
-  {
-    title: "Executive Search",
-    description: "Connecting top-tier executives with prestigious international positions across industries.",
-    icon: "M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z",
-    image: "https://images.unsplash.com/photo-1560179707-f14e90ef3623?w=800&q=80"
-  },
-  {
-    title: "Career Consulting",
-    description: "Personalized guidance to navigate international career transitions and maximize your potential.",
-    icon: "M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z",
-    image: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&q=80"
-  },
-  {
-    title: "Global Relocation",
-    description: "Comprehensive support for seamless international relocations, from visa to settlement.",
-    icon: "M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z",
-    image: "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=800&q=80"
-  },
-  {
-    title: "Market Intelligence",
-    description: "In-depth insights into global job markets, salary benchmarks, and industry trends.",
-    icon: "M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80"
-  }
-];
+// Services section with bento grid layout
 ---
 
-<section id="services" class="py-32 md:py-40 lg:py-48 bg-white">
-  <div class="max-w-7xl mx-auto px-8 lg:px-12">
-    <div class="text-center mb-20">
+<section id="services" class="py-24 md:py-32 lg:py-40 bg-white">
+  <div class="max-w-7xl mx-auto px-6 md:px-12 lg:px-20">
+    <!-- Section header -->
+    <div class="text-center max-w-3xl mx-auto mb-16 md:mb-20">
       <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-stone-900 mb-6 animate-on-scroll">
-        World-Class Services
+        Placement Excellence,
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-600 to-rose-600">Worldwide</span>
       </h2>
-      <p class="text-xl text-stone-600 max-w-3xl mx-auto animate-on-scroll">
-        Comprehensive solutions designed to accelerate your international career journey.
+      <p class="text-xl text-stone-600 leading-relaxed animate-on-scroll">
+        From executive search to specialized recruitment, we deliver tailored solutions for global talent acquisition.
       </p>
     </div>
     
-    <div class="grid md:grid-cols-2 gap-8 lg:gap-12">
-      {services.map((service, index) => (
-        <div class="group relative bg-white rounded-2xl overflow-hidden shadow-lg shadow-stone-200/50 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 animate-on-scroll">
-          <div class="absolute -inset-0.5 bg-gradient-to-r from-amber-600 to-rose-600 rounded-2xl opacity-0 group-hover:opacity-10 blur transition duration-500"></div>
-          <div class="relative">
-            <div class="aspect-[16/9] overflow-hidden bg-stone-100">
-              <img 
-                src={service.image} 
-                alt={service.title}
-                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-              />
+    <!-- Bento grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+      <!-- Executive Search - Large card -->
+      <div class="md:col-span-2 lg:col-span-2 group animate-on-scroll">
+        <div class="relative h-full bg-gradient-to-br from-stone-900 to-stone-800 rounded-3xl p-8 md:p-12 overflow-hidden hover:shadow-2xl transition-all duration-300">
+          <div class="absolute top-0 right-0 w-64 h-64 bg-amber-500/10 rounded-full blur-3xl"></div>
+          
+          <div class="relative z-10">
+            <div class="inline-flex items-center justify-center w-16 h-16 bg-amber-500/20 rounded-2xl mb-6">
+              <svg class="w-8 h-8 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A8.997 8.997 0 0112 21a8.997 8.997 0 01-9-7.745M21 13.255V16.5a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 16.5v-3.245m18 0A8.997 8.997 0 0012 3a8.997 8.997 0 00-9 10.255m18 0H3"></path>
+              </svg>
             </div>
-            <div class="p-8 lg:p-10">
-              <div class="w-14 h-14 bg-gradient-to-br from-amber-500 to-rose-500 rounded-xl flex items-center justify-center mb-6">
-                <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={service.icon}></path>
-                </svg>
-              </div>
-              <h3 class="text-2xl font-bold text-stone-900 mb-4">{service.title}</h3>
-              <p class="text-stone-600 leading-relaxed">{service.description}</p>
+            
+            <h3 class="text-3xl font-bold text-white mb-4">Executive Search</h3>
+            <p class="text-lg text-stone-300 mb-6 leading-relaxed">
+              Identifying and securing C-suite and senior leadership talent for organizations worldwide. Our extensive network spans industries and continents.
+            </p>
+            
+            <div class="flex items-center gap-4">
+              <span class="text-amber-400 font-semibold">Learn more</span>
+              <svg class="w-5 h-5 text-amber-400 group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+              </svg>
             </div>
           </div>
+          
+          <!-- Background image -->
+          <div class="absolute inset-0 opacity-10">
+            <img 
+              src="https://images.unsplash.com/photo-1560179707-f14e90ef3623?auto=format&fit=crop&q=80&w=800" 
+              alt="Executive boardroom"
+              class="w-full h-full object-cover"
+              loading="lazy"
+            />
+          </div>
         </div>
-      ))}
+      </div>
+      
+      <!-- Industry Specialists -->
+      <div class="group animate-on-scroll">
+        <div class="h-full bg-amber-50 rounded-3xl p-8 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative overflow-hidden">
+          <div class="inline-flex items-center justify-center w-14 h-14 bg-amber-600/20 rounded-2xl mb-6">
+            <svg class="w-7 h-7 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+            </svg>
+          </div>
+          
+          <h3 class="text-2xl font-bold text-stone-900 mb-3">Industry Specialists</h3>
+          <p class="text-stone-600 mb-4 leading-relaxed">
+            Deep expertise across technology, finance, healthcare, and manufacturing sectors.
+          </p>
+          
+          <ul class="space-y-2 text-sm text-stone-600">
+            <li class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-amber-600" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+              </svg>
+              Technology & Digital
+            </li>
+            <li class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-amber-600" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+              </svg>
+              Financial Services
+            </li>
+            <li class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-amber-600" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+              </svg>
+              Healthcare & Life Sciences
+            </li>
+          </ul>
+          
+          <!-- Background image -->
+          <div class="absolute bottom-0 right-0 w-32 h-32 opacity-10">
+            <img 
+              src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=400" 
+              alt="Industry analysis"
+              class="w-full h-full object-cover rounded-tl-3xl"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </div>
+      
+      <!-- Contract Staffing -->
+      <div class="group animate-on-scroll">
+        <div class="h-full bg-rose-50 rounded-3xl p-8 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative overflow-hidden">
+          <div class="inline-flex items-center justify-center w-14 h-14 bg-rose-600/20 rounded-2xl mb-6">
+            <svg class="w-7 h-7 text-rose-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+          </div>
+          
+          <h3 class="text-2xl font-bold text-stone-900 mb-3">Contract Staffing</h3>
+          <p class="text-stone-600 mb-4 leading-relaxed">
+            Flexible workforce solutions for project-based and temporary needs.
+          </p>
+          
+          <div class="flex items-center gap-2 text-rose-600 font-semibold">
+            <span>Quick deployment</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+            </svg>
+          </div>
+          
+          <!-- Background image -->
+          <div class="absolute bottom-0 right-0 w-32 h-32 opacity-10">
+            <img 
+              src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&q=80&w=400" 
+              alt="Team collaboration"
+              class="w-full h-full object-cover rounded-tl-3xl"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </div>
+      
+      <!-- RPO Solutions -->
+      <div class="group animate-on-scroll">
+        <div class="h-full bg-stone-100 rounded-3xl p-8 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative overflow-hidden">
+          <div class="inline-flex items-center justify-center w-14 h-14 bg-stone-600/20 rounded-2xl mb-6">
+            <svg class="w-7 h-7 text-stone-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+            </svg>
+          </div>
+          
+          <h3 class="text-2xl font-bold text-stone-900 mb-3">RPO Solutions</h3>
+          <p class="text-stone-600 mb-4 leading-relaxed">
+            End-to-end recruitment process outsourcing for scalable growth.
+          </p>
+          
+          <div class="text-3xl font-black text-stone-900">50%</div>
+          <div class="text-sm text-stone-600">Cost reduction</div>
+          
+          <!-- Background image -->
+          <div class="absolute bottom-0 right-0 w-32 h-32 opacity-10">
+            <img 
+              src="https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&q=80&w=400" 
+              alt="Process optimization"
+              class="w-full h-full object-cover rounded-tl-3xl"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </div>
+      
+      <!-- Talent Consulting -->
+      <div class="md:col-span-2 lg:col-span-1 group animate-on-scroll">
+        <div class="h-full bg-gradient-to-br from-amber-100 to-rose-100 rounded-3xl p-8 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative overflow-hidden">
+          <div class="inline-flex items-center justify-center w-14 h-14 bg-white/50 rounded-2xl mb-6">
+            <svg class="w-7 h-7 text-amber-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+            </svg>
+          </div>
+          
+          <h3 class="text-2xl font-bold text-stone-900 mb-3">Talent Consulting</h3>
+          <p class="text-stone-600 mb-4 leading-relaxed">
+            Strategic workforce planning and talent management advisory services.
+          </p>
+          
+          <a href="/contact" class="inline-flex items-center gap-2 text-amber-700 font-semibold group-hover:gap-3 transition-all">
+            Get expert advice
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </a>
+          
+          <!-- Background image -->
+          <div class="absolute bottom-0 right-0 w-40 h-40 opacity-10">
+            <img 
+              src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=400" 
+              alt="Strategic consulting"
+              class="w-full h-full object-cover rounded-tl-3xl"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>

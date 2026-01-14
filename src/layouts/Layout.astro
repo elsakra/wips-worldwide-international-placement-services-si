@@ -4,7 +4,7 @@ export interface Props {
   description?: string;
 }
 
-const { title, description = 'WIPS Worldwide - Premium International Placement Services' } = Astro.props;
+const { title, description = 'WIPS Worldwide - International Placement Services' } = Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -30,5 +30,6 @@ const { title, description = 'WIPS Worldwide - Premium International Placement S
   </head>
   <body>
     <slot />
+    <script src="/src/scripts/animations.ts"></script>
   </body>
 </html>
