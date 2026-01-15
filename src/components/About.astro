@@ -1,57 +1,74 @@
 ---
-const stats = [
-  { number: "15+", label: "Years of Excellence" },
-  { number: "500+", label: "Successful Placements" },
-  { number: "50+", label: "Countries Covered" },
-  { number: "98%", label: "Client Satisfaction" }
-];
 ---
 
-<section id="about" class="relative py-32 md:py-40 lg:py-48 bg-gradient-to-br from-stone-900 via-stone-800 to-stone-900 overflow-hidden">
-  <!-- Background texture -->
-  <div class="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:64px_64px]"></div>
-  
-  <div class="relative z-10 max-w-7xl mx-auto px-8 lg:px-12">
-    <div class="grid lg:grid-cols-2 gap-16 items-center">
-      <div class="animate-on-scroll">
-        <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white mb-6">
-          Trusted by Leaders
-          <span class="block text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-rose-400">
-            Worldwide
-          </span>
+<section id="about" class="py-32 md:py-40 bg-gradient-to-r from-amber-50 to-stone-50" data-module-key="about" data-dominant-signal="image">
+  <div class="max-w-7xl mx-auto px-8 lg:px-12">
+    <div class="grid md:grid-cols-5 gap-16 items-center">
+      <div class="md:col-span-3 animate-on-scroll">
+        <h2 class="text-5xl md:text-6xl font-bold tracking-tight mb-6" data-section-header-recipe="primary">
+          Setting the Standard in International Placement
         </h2>
-        <p class="text-xl text-stone-300 mb-8 leading-relaxed">
-          For over 15 years, WIPS has been the premier choice for professionals seeking exceptional international career opportunities. Our deep industry connections and personalized approach ensure every placement is a perfect match.
+        <p class="text-xl text-stone-600 leading-relaxed mb-8">
+          For over 25 years, WIPS Worldwide has been the trusted partner for organizations seeking exceptional international talent and professionals pursuing global opportunities.
         </p>
-        <p class="text-lg text-stone-400 mb-12">
-          We don't just find jobs – we craft career trajectories that transform lives and organizations.
+        <p class="text-lg text-stone-600 leading-relaxed mb-8">
+          Our Swiss heritage of precision and excellence drives everything we do. From Fortune 500 companies to emerging startups, we've successfully placed thousands of professionals across industries and continents.
         </p>
-        
-        <!-- Stats Grid -->
-        <div class="grid grid-cols-2 gap-6">
-          {stats.map((stat) => (
-            <div class="backdrop-blur-xl bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300">
-              <div class="text-3xl font-bold text-white mb-1">{stat.number}</div>
-              <div class="text-stone-400">{stat.label}</div>
-            </div>
-          ))}
-        </div>
-      </div>
-      
-      <div class="relative animate-on-scroll">
-        <!-- Team/founder image -->
-        <div class="relative rounded-2xl overflow-hidden">
-          <img 
-            src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&q=80" 
-            alt="Professional business woman" 
-            class="w-full aspect-[4/5] object-cover"
-          />
-          <div class="absolute inset-0 bg-gradient-to-t from-stone-900/80 via-stone-900/20 to-transparent"></div>
-          <div class="absolute bottom-0 left-0 right-0 p-8">
-            <h3 class="text-2xl font-bold text-white mb-2">Expert Leadership</h3>
-            <p class="text-stone-300">Dedicated professionals with global expertise</p>
+        <div class="grid grid-cols-2 gap-8 mb-8">
+          <div>
+            <div class="text-4xl font-bold text-amber-600 mb-2" data-counter="5000">0</div>
+            <div class="text-stone-600">Successful Placements</div>
+          </div>
+          <div>
+            <div class="text-4xl font-bold text-amber-600 mb-2" data-counter="50">0</div>
+            <div class="text-stone-600">Countries Served</div>
           </div>
         </div>
+        <a href="#contact" class="inline-flex items-center gap-2 px-8 py-4 text-lg font-semibold bg-gradient-to-r from-amber-400 to-amber-500 text-white rounded-full shadow-lg shadow-amber-500/25 hover:shadow-xl hover:shadow-amber-500/30 hover:scale-105 active:scale-95 transition-all duration-300" data-button-recipe="primary">
+          Partner With Us
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+          </svg>
+        </a>
+      </div>
+      <div class="md:col-span-2 animate-on-scroll stagger-1">
+        <div class="relative">
+          <div class="aspect-[4/5] rounded-3xl overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?w=800&h=1000&fit=crop" alt="Business professionals in modern office" class="w-full h-full object-cover">
+          </div>
+          <div class="absolute -bottom-6 -left-6 bg-white rounded-2xl p-6 shadow-xl">
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center">
+                <svg class="w-6 h-6 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path>
+                </svg>
+              </div>
+              <div>
+                <div class="text-2xl font-bold text-stone-900">25+</div>
+                <div class="text-stone-600 text-sm">Years Experience</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Trust indicators -->
+    <div class="mt-24 grid md:grid-cols-3 gap-8">
+      <div class="bg-white rounded-2xl p-8 shadow-lg animate-on-scroll">
+        <img src="https://images.unsplash.com/photo-1560179707-f14e90ef3623?w=400&h=300&fit=crop" alt="Modern office building" class="w-full h-48 object-cover rounded-xl mb-6">
+        <h3 class="text-xl font-bold text-stone-900 mb-2">Global Reach</h3>
+        <p class="text-stone-600">Offices in Zurich, London, New York, and Singapore ensure 24/5 support across time zones.</p>
+      </div>
+      <div class="bg-white rounded-2xl p-8 shadow-lg animate-on-scroll stagger-1">
+        <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=400&h=300&fit=crop" alt="Team meeting" class="w-full h-48 object-cover rounded-xl mb-6">
+        <h3 class="text-xl font-bold text-stone-900 mb-2">Industry Expertise</h3>
+        <p class="text-stone-600">Specialized teams for technology, healthcare, finance, and engineering sectors.</p>
+      </div>
+      <div class="bg-white rounded-2xl p-8 shadow-lg animate-on-scroll stagger-2">
+        <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=400&h=300&fit=crop" alt="Handshake agreement" class="w-full h-48 object-cover rounded-xl mb-6">
+        <h3 class="text-xl font-bold text-stone-900 mb-2">Trusted Partners</h3>
+        <p class="text-stone-600">Long-term relationships with leading organizations worldwide.</p>
       </div>
     </div>
   </div>

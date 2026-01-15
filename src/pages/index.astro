@@ -2,22 +2,25 @@
 import Layout from '../layouts/Layout.astro';
 import Hero from '../components/Hero.astro';
 import Services from '../components/Services.astro';
-import GlobalReach from '../components/GlobalReach.astro';
-import Testimonials from '../components/Testimonials.astro';
-import CTA from '../components/CTA.astro';
+import About from '../components/About.astro';
+import Stats from '../components/Stats.astro';
 import Contact from '../components/Contact.astro';
+import CTA from '../components/CTA.astro';
 import Footer from '../components/Footer.astro';
-import '../styles/global.css';
 ---
 
-<Layout title="WIPS Worldwide - International Placement Services">
-  <main>
+<Layout title="WIPS Worldwide - Premium International Placement Services">
+  <main data-layout-pattern="editorial" data-card-style="glass" data-button-style="pill">
     <Hero />
     <Services />
-    <GlobalReach />
-    <Testimonials />
-    <CTA />
+    <About />
+    <Stats />
     <Contact />
+    <CTA />
     <Footer />
   </main>
 </Layout>
+
+<script>
+  import '../scripts/animations.ts';
+</script>
